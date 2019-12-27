@@ -17,7 +17,13 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin/index');
+        if(Auth::user()->etat == 1)
+        {
+
+        }else{
+            return view('admin/index');
+        }
+       
     }
 
     public function listDomaine(){

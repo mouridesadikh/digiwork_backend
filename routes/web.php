@@ -15,13 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verify'=> true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('lang/{locale}', 'LocalizationController@index');
+Auth::routes(['verify'=> true]);
 
-// Route::get('/users/confirmation/{token}','Auth\RegisterController@confirmation')->name('confirmation');
+
+ Route::get('/users/confirmation/{token}','Auth\RegisterController@confirmation')->name('confirmation');
 
 
 //Admin route
@@ -31,3 +32,12 @@ Route::post('admin/digi221/digiwork/domaine/save', 'AdminController@saveDomaine'
 Route::get('admin/digi221/digiwork/domaine/delete/{id}', 'AdminController@deleteDomaine')->name('deleteDomaine');
 Route::post('admin/digi221/digiwork/specialite/save' , 'AdminController@saveSpecialite')->name('saveSpecialite');
 Route::get('admin/digi221/digiwork/specialite/delete/{id}', 'AdminController@deleteSpecialite')->name('deleteSpecialite');
+
+
+
+
+
+//profil edition 
+
+Route::get('digi221/digiwork/prestataires', 'PrestataireController@index')->name('editProfil');
+Route::get('digi221/digiwork/prestataires/valideProfil', 'PrestataireController@valideProfil')->name('valideProfil');

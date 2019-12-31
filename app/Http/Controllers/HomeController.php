@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(Auth::user()->etat === 1)
+        if(Auth::user()->etat === 0)
         {
             return redirect()->route('valideProfil');
         }else{

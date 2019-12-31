@@ -1,8 +1,10 @@
 @extends('../layouts.app')
 
 @section('content')
-
+<form method="post" action="{{route('saveProfil')}}" enctype="multipart/form-data">
+  @csrf
 <div id="wizard2" class="container" style="padding-top: 5%">
+
     <h3>Information Personnelle</h3>
     <section>
       {{-- <p>Try the keyboard navigation by clicking arrow left or right!</p> --}}
@@ -16,7 +18,7 @@
       </div><!-- form-group -->
       <div class="form-group wd-xs-300">
         <label class="form-control-label">Photo: <span class="tx-danger">*</span></label>
-        <input id="image" class="form-control" name="image" type="file" required>
+        <input id="image" class="form-control" name="photo" type="file" required>
       </div>
       <div class="form-group wd-xs-300">
         <label class="rdiobox">
@@ -48,12 +50,14 @@
            
         </select>
       </div><!-- form-group -->
+      <button type="submit" class="btn btn-success">Valider</button>
     </section>
-    <h3>Fin</h3>
+    {{-- <h3>Fin</h3>
     <section>
       <p>The next and previous buttons help you to navigate through your content.</p>
-    </section>
+    </section> --}}
+  
   </div>
-
+</form>
 
   @endsection

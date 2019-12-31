@@ -41,3 +41,6 @@ Route::get('admin/digi221/digiwork/specialite/delete/{id}', 'AdminController@del
 
 Route::get('digi221/digiwork/prestataires', 'PrestataireController@index')->name('editProfil');
 Route::get('digi221/digiwork/prestataires/valideProfil', 'PrestataireController@valideProfil')->name('valideProfil');
+Route::post('digi221/digiwork/prestataires/saveProfil', 'PrestataireController@saveProfil')->name('saveProfil');
+Route::get('digi221/digiwork/prestataires/listeAnnonces', 'PrestataireController@listeAnnonces')->name('listeAnnonces');
+

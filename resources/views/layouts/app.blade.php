@@ -34,7 +34,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         #overlay{position: fixed;
-        top: 0;
+        top: 10%;
         bottom: 0;
         left: 0;
         right: 0;
@@ -59,21 +59,6 @@
       
       
       @auth
-      <div class="bg-primary py-3 top-bar shadow d-none d-md-block">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-md-left pl-0">
-              <a href="#" class=" pr-3 pl-0">home</a>
-              <a href="#" class="p-3">Events</a>
-              <a href="#" class="p-3">Become A Volunteer</a>
-            </div>
-            <div class="col-md-6 text-md-right">
-              <a href="#" class="p-3"><span class="icon-twitter"></span></a>
-              <a href="#" class="p-3"><span class="icon-facebook"></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
       @endauth
       <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
 
@@ -314,7 +299,7 @@
                 } else {
                      specialite.validate();
                      domaine.validate();
-                     }
+                }
               }
             // Always allow step back to the previous step even if the current step is not valid.
             } else { return true; }

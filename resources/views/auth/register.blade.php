@@ -44,9 +44,9 @@
                         @enderror
                        
                         </div>
-                        <input type="hidden" value=""  id="adr_c" name="adr_c" >
-                        <input type="hidden" value=""  id="lat" name="lat" >
-                        <input type="hidden"   value="" id="lng" name="lng" >
+                        <input type="hidden" value="ddd"  id="adr_c" name="adr_c" >
+                        <input type="hidden" value="ddd"  id="lat" name="lat" >
+                        <input type="hidden"   value="ddd" id="lng" name="lng" >
                         <div class="form-group">
                         <input id="email" type="email" placeholder=@lang("email") class="form-control c-outline-dark @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                         @error('email')

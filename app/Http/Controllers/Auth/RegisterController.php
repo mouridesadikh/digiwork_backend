@@ -75,7 +75,7 @@ class RegisterController extends Controller
             'adresse' => $data['adr'],
             'adresse_complet' => $data['adr_c'],
             'profil' => $data['profil'],
-            'etat' => true,
+            'etat' => false,
             'lat' => $data['lat'],
             'lng' => $data['lng'],
             'email' => $data['email'],

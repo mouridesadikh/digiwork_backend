@@ -6,6 +6,7 @@ use App\Specialite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     //
@@ -17,10 +18,12 @@ class AdminController extends Controller
 
     public function index()
     {
+       //dd(Auth::user()->etat );
         if(Auth::user()->etat == 1)
         {
 
         }else{
+            //dd('');
             return view('admin/index');
         }
        
